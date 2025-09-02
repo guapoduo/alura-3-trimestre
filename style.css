@@ -1,1 +1,134 @@
+/* Início da definição de variáveis CSS */
+:root {
+    --branco: white; /* Define uma variável para a cor branca */
+    --cor-de-fundo: #7f00b2; /* Define a cor de fundo do corpo da página */
+    --fundo-senha: #4c007d; /* Define a cor de fundo da área da senha */
+    --fundo-texto: #bc4ed8; /* Define a cor de fundo para blocos de texto */
+    --borda: #1b004b; /* Define a cor da borda de destaque */
+    --roboto: 'Roboto', sans-serif; /* Define a família de fonte Roboto para uso geral */
+    --roboto-mono: 'Roboto Mono', monospace; /* Define a família de fonte Roboto Mono para uso específico */
+}
+
+/* Aplica estilos a todos os elementos da página */
+* {
+    font-weight: 400; /* Define a espessura da fonte como normal para todos os elementos */
+}
+
+/* Estilos para o corpo da página */
+body {
+    color: var(--branco); /* Aplica a cor branca ao texto do corpo */
+    background-color: var(--cor-de-fundo); /* Aplica a cor de fundo definida na variável */
+    font-family: var(--roboto); /* Aplica a fonte principal ao corpo */
+}
+
+/* Estilos para o título principal */
+.titulo-principal {
+    font-family: var(--roboto-mono); /* Aplica a fonte de estilo de código ao título */
+    font-size: 32px; /* Define o tamanho da fonte do título principal */
+}
+
+/* Estilos para o título secundário */
+.titulo-secundario {
+    font-size: 24px; /* Define o tamanho da fonte do título secundário */
+}
+
+/* Estilos para o contêiner do título */
+.conteudo-titulo {
+    text-align: center; /* Centraliza o texto do título */
+    margin-top: 80px; /* Adiciona uma margem superior de 80 pixels */
+}
+
+/* Estilos para a caixa que exibe a senha */
+.conteudo-senha {
+    margin-top: 80px; /* Adiciona uma margem superior de 80 pixels */
+    background: var(--fundo-senha); /* Aplica a cor de fundo da área da senha */
+    padding: 24px; /* Adiciona um espaçamento interno de 24 pixels */
+    border-bottom: 6px solid var(--borda); /* Adiciona uma borda inferior de 6 pixels */
+}
+
+/* Estilos para o campo de entrada da senha */
+#campo-senha {
+    background-color: var(--fundo-senha); /* Define o fundo igual ao da caixa da senha */
+    border: none; /* Remove a borda padrão do campo */
+    color: var(--branco); /* Define a cor do texto do campo como branca */
+    font-family: var(--roboto-mono); /* Aplica a fonte de estilo de código */
+    font-size: 40px; /* Define o tamanho da fonte da senha */
+    width: 70%; /* Define a largura do campo */
+}
+
+/* Estilos quando o campo de senha está em foco */
+#campo-senha:focus {
+    outline: none; /* Remove o contorno de foco padrão do navegador */
+}
+
+/* Estilos para o contêiner principal de conteúdo */
+.conteudo {
+    max-width: 1200px; /* Limita a largura do contêiner a 1200 pixels */
+    margin: 0 auto; /* Centraliza o contêiner na página */
+}
+
+/* Estilos para a área de parâmetros */
+.parametro {
+    background-color: var(--fundo-texto); /* Aplica a cor de fundo definida para texto */
+    border: 2px solid var(--borda); /* Adiciona uma borda sólida com a cor de destaque */
+    margin-top: 32px; /* Adiciona uma margem superior de 32 pixels */
+    padding: 24px; /* Adiciona um espaçamento interno de 24 pixels */
+}
+
+/* Estilos para o título da seção de parâmetros */
+.parametro-titulo {
+    font-family: var(--roboto-mono); /* Aplica a fonte de estilo de código */
+    font-size: 28px; /* Define o tamanho da fonte do título dos parâmetros */
+}
+
+/* Estilos para o subtítulo da senha nos parâmetros */
+.parametro-senha__titulo {
+    font-size: 24px; /* Define o tamanho da fonte do subtítulo */
+}
+
+/* Estilos para a coluna de parâmetros da senha */
+.parametro-coluna__senha {
+    display: flex; /* Habilita o Flexbox para organizar os itens */
+    flex-direction: column; /* Organiza os itens em uma coluna por padrão (para telas menores) */
+    justify-content: center; /* Centraliza os itens verticalmente */
+}
+
+/* Estilos para a seção de senha dos parâmetros */
+.parametro-senha {
+    width: 50%; /* Define a largura da seção de senha */
+    margin: 0 auto; /* Centraliza a seção horizontalmente */
+}
+
+/* Estilos para o contêiner dos botões de parâmetro */
+.parametro-senha-botoes {
+    display: flex; /* Habilita o Flexbox */
+    justify-content: center; /* Centraliza os botões horizontalmente */
+}
+
+/* Estilos para os botões dos parâmetros da senha */
+.parametro-senha__botao {
+    background-color: var(--fundo-texto); /* Define o fundo do botão */
+    color: var(--branco); /* Define a cor do texto do botão */
+    border: 2px solid var(--borda); /* Adiciona uma borda com a cor de destaque */
+    padding: 24px; /* Adiciona espaçamento interno */
+    font-size: 24px; /* Define o tamanho da fonte */
+    cursor: pointer; /* Transforma o cursor em um ponteiro ao passar sobre o botão */
+}
+
+/* Estilos para o texto dos parâmetros da senha */
+.parametro-senha__texto {
+    padding: 24px; /* Adiciona espaçamento interno */
+    border-top: 2px solid var(--borda); /* Adiciona uma borda superior */
+    border-bottom: 2px solid var(--borda); /* Adiciona uma borda inferior */
+    margin: 0; /* Remove a margem padrão */
+    font-size: 24px; /* Define o tamanho da fonte */
+}
+
+/* Início da media query para telas maiores que 768px */
+@media screen and (min-width: 768px) {
+    /* Altera o estilo da coluna de parâmetros em telas maiores */
+    .parametro-coluna__senha {
+        flex-direction: row; /* Muda a direção do Flexbox para linha */
+    }
+}
 
